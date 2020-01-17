@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Menu_Buttons
+  - Menu_Panels
   layers:
   - Default
   - TransparentFX
