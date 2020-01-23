@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Menu_Buttons
   - Menu_Panels
+  - Manager
   layers:
   - Default
   - TransparentFX

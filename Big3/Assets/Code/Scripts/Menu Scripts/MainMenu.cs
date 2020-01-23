@@ -3,39 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : MenuController
 {
-    enum MENU_ACTION { START, SETTINGS, UPGRADES, QUIT};
     [SerializeField]
     private Button startBtn, settingsBtn;
     [SerializeField]
     private TMP_Text companyName, mainTitle;
-    [SerializeField]
-    private GameObject mainPanel, settingsPanel;
+
+    GameObject globalManager;
 
     private void Start()
     {
-        startBtn.onClick.AddListener(() => OnClickEvent(MENU_ACTION.START));
-        settingsBtn.onClick.AddListener(() => OnClickEvent(MENU_ACTION.SETTINGS));
-
+        globalManager = GlobalManager.Instance.gameObject;
+        InitializePanels();
+        startBtn.onClick.AddListener(() => OnClickEvent(MENU_ACTION.ACTION.START));
+        settingsBtn.onClick.AddListener(() => OnClickEvent(MENU_ACTION.ACTION.SETTINGS));
     }
 
-    private void OnClickEvent(MENU_ACTION mA)
-    {
+    override protected void OnClickEvent(MENU_ACTION.ACTION mA)
+    { 
         switch (mA)
         {
-            case MENU_ACTION.START:
+            case MENU_ACTION.ACTION.START:
                 Debug.Log("Start button pressed");
                 StartGame();
                 break;
-            case MENU_ACTION.SETTINGS:
+            case MENU_ACTION.ACTION.SETTINGS:
                 Debug.Log("Settings button pressed");
-                OpenSettingsMenu();
+                ChangeMenu(panels[(int)PANEL_NAME.MAIN], panels[(int)PANEL_NAME.SETTINGS]);
                 break;
-            case MENU_ACTION.UPGRADES:
-                break;
-            case MENU_ACTION.QUIT:
+            case MENU_ACTION.ACTION.QUIT:
                 break;
             default:
                 break;
@@ -44,20 +43,6 @@ public class MainMenu : MonoBehaviour
 
     private void StartGame()
     {
-
-    }
-
-    private void OpenSettingsMenu()
-    {
-        if (mainPanel != null && settingsPanel != null)
-        {
-            ChangeState(mainPanel);
-            ChangeState(settingsPanel);
-        }
-    }
-
-    private void ChangeState(GameObject obj)
-    {
-        obj.SetActive(!obj.activeSelf);
+        globalManager.GetComponent<SceneManagement>().loadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

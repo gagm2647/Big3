@@ -403,6 +403,9 @@ GameObject:
   m_Component:
   - component: {fileID: 427086172}
   - component: {fileID: 427086171}
+  - component: {fileID: 427086174}
+  - component: {fileID: 427086173}
+  - component: {fileID: 427086175}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -426,8 +429,6 @@ MonoBehaviour:
   settingsBtn: {fileID: 1844174092}
   companyName: {fileID: 1610035463}
   mainTitle: {fileID: 625392343}
-  mainPanel: {fileID: 848144086}
-  settingsPanel: {fileID: 956625844}
 --- !u!4 &427086172
 Transform:
   m_ObjectHideFlags: 0
@@ -442,6 +443,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &427086173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427086170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84cf8b7b4ddf8147af7a246fd722172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &427086174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427086170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66b535b29d40154398cf41ed4a8c901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backButton: {fileID: 358705440}
+  settingsTitle: {fileID: 721953338}
+--- !u!114 &427086175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427086170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92282a6b93e08d54ca7f423c683c8b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panels:
+  - {fileID: 848144086}
+  - {fileID: 956625844}
 --- !u!1 &601810972
 GameObject:
   m_ObjectHideFlags: 0
