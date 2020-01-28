@@ -6,11 +6,7 @@ using TMPro;
 
 public abstract class MenuController : MonoBehaviour
 {
-    public enum PANEL_NAME
-    {
-        MAIN = 0,
-        SETTINGS = 1
-    };
+    public enum PANEL_NAME {};
 
     protected List<GameObject> panels;
 
@@ -18,7 +14,7 @@ public abstract class MenuController : MonoBehaviour
 
     protected void InitializePanels()
     {
-        panels = this.gameObject.GetComponent<PANEL_HOLDER>().getPanel();
+        panels = this.gameObject.GetComponent<PANEL_HOLDER>().GetPanel();
     }
 
     protected void ChangeMenu(GameObject currPanel, GameObject tarPanel)

@@ -9,6 +9,9 @@ public class MENU_ACTION : MonoBehaviour
         START,
         SETTINGS,
         QUIT,
-        BACK
+        BACK,
+        SKINS,
+        UPGRADES,
+        MUTE
     };
 }

@@ -6,6 +6,13 @@ using TMPro;
 
 public class SettingsMenu : MenuController
 {
+    public new enum PANEL_NAME
+    {
+        MAIN = 0,
+        SETTINGS = 0
+    };
+
+
     [SerializeField]
     private Button backButton;
     [SerializeField]

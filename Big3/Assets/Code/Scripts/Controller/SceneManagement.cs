@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,29 +13,28 @@ public class SceneManagement : MonoBehaviour
     private void Awake()
     {
         count = SceneManager.sceneCountInBuildSettings;
+        Debug.Log(count);
         __sceneList = new string[count];
 
-        StoreAllScenes();
-        loadScene(SceneManager.GetActiveScene().buildIndex + 1); // Loads the first real scene when the game is initialized
+        LoadScene(1);
     }
 
     private void StoreAllScenes()
     {
-        for (int i = 0; i < count; i++)
-        {
-            __sceneList[i] = SceneManager.GetSceneByBuildIndex(i).name;
-            //Debug.Log(__sceneList[i] + " " + count);
-        }
+        __sceneList = (from scene in EditorBuildSettings.scenes where scene.enabled select scene.path).ToArray();
     }
 
-    public EngineStatus.Engine_Status loadScene(int sceneIndex)
+    public EngineStatus.Engine_Status LoadScene(int sceneIndex)
     {
         EngineStatus.Engine_Status retStatus = EngineStatus.Engine_Status.ENGINE_INDEX_OUT_OF_RANGE;
 
-        Debug.Log(sceneIndex);
+        StoreAllScenes();
+
+        //Debug.Log(sceneIndex);
 
         if (sceneIndex > 0 && sceneIndex <= __sceneList.Length)
         {
+            SceneManager.LoadScene(__sceneList[sceneIndex]);
             retStatus = EngineStatus.Engine_Status.ENGINE_OPERATION_SUCCESS;
         }
 

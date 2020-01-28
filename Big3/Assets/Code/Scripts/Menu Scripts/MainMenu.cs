@@ -7,6 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MenuController
 {
+    public new enum PANEL_NAME
+    {
+        MAIN = 0,
+        SETTINGS = 1
+    };
+
     [SerializeField]
     private Button startBtn, settingsBtn;
     [SerializeField]
@@ -43,6 +49,6 @@ public class MainMenu : MenuController
 
     private void StartGame()
     {
-        globalManager.GetComponent<SceneManagement>().loadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        globalManager.GetComponent<SceneManagement>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
