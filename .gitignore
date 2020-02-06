@@ -58,4 +58,9 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-/FirstGame
+
+Big3/Library/
+
+Big3/obj/
+
+FirstGame/
