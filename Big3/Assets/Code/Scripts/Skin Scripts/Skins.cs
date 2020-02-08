@@ -10,9 +10,10 @@ public class Skins : ScriptableObject
 
     public Sprite artWork;
 
-    public int kickPower;
-    public int weight;
+    public float kickPower;
+    public float weight;
     public int totalSwing;
-    public int powerEfficiency;
+    public float powerEfficiency;
+    public float gravityEffect;
 
 }

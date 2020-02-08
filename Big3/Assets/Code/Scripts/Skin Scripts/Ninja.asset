@@ -19,3 +19,4 @@ MonoBehaviour:
   weight: 1
   totalSwing: 1
   powerEfficiency: 1
+  gravityEffect: 0.5

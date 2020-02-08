@@ -1102,9 +1102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfbd2d5543efb44b8a37253454654f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin: {fileID: 11400000, guid: 5057a0720b3515a45a54bdbe95c0574b, type: 2}
+  skin: {fileID: 11400000, guid: d724e14ecd300ca4c85a3bdb1c39237b, type: 2}
   nameText: {fileID: 94492665}
   sprite: {fileID: 1274499863}
+  rigidBody: {fileID: 646146013}
 --- !u!50 &646146013
 Rigidbody2D:
   serializedVersion: 4

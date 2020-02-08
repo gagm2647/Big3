@@ -11,11 +11,15 @@ public class SkinDisplay : MonoBehaviour
 
     public Image sprite;
 
+    public Rigidbody2D rigidBody;
     // Start is called before the first frame update
     void Start()
     {
         nameText.text = skin.name;
         sprite.sprite = skin.artWork;
+
+        rigidBody.gravityScale = skin.gravityEffect;
+        rigidBody.mass = skin.weight;
 
     }
 
