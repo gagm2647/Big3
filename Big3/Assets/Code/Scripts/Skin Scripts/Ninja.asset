@@ -16,7 +16,8 @@ MonoBehaviour:
   description: ninja suit
   artWork: {fileID: 21300000, guid: 2da00bf807eeea54f876255c1c6320a0, type: 3}
   kickPower: 1
-  weight: 1
+  weight: 10
   totalSwing: 1
   powerEfficiency: 1
-  gravityEffect: 0.5
+  gravityEffect: 1
+  gameObject: {fileID: 0}

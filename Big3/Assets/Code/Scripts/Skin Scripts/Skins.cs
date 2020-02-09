@@ -16,4 +16,5 @@ public class Skins : ScriptableObject
     public float powerEfficiency;
     public float gravityEffect;
 
+
 }
