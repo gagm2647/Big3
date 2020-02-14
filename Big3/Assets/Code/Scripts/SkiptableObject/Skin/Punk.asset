@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Punk
   description: Punk head, powerless but weightless too
-  artWork: {fileID: 0}
+  artWork: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   kickPower: 1
   weight: 1
   totalSwing: 2
