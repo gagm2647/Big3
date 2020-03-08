@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 368104146}
   m_Layer: 10
   m_Name: YBoost
-  m_TagString: Untagged
+  m_TagString: YBoost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1222,6 +1222,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 500
+  normalSpeed: 500
+  speedCooldown: 2
+  speedBoost: 5000
   skin: {fileID: 11400000, guid: d724e14ecd300ca4c85a3bdb1c39237b, type: 2}
   isGrounded: 0
   groundCheck: {fileID: 809055624}
@@ -2635,7 +2638,7 @@ GameObject:
   - component: {fileID: 1274499863}
   m_Layer: 0
   m_Name: Skin
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2708,7 +2711,7 @@ GameObject:
   - component: {fileID: 1291335551}
   m_Layer: 10
   m_Name: BoostSprite
-  m_TagString: Untagged
+  m_TagString: XBoost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2737,7 +2740,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.020467885}
@@ -3672,7 +3675,7 @@ GameObject:
   - component: {fileID: 1788993353}
   m_Layer: 10
   m_Name: BoostSprite
-  m_TagString: Untagged
+  m_TagString: YBoost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3750,7 +3753,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00202021, y: 0.0020202212}

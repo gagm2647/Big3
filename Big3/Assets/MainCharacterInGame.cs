@@ -5,6 +5,9 @@ using UnityEngine;
 public class MainCharacterInGame : MonoBehaviour
 {
     public float speed = 500f;
+    public float normalSpeed = 500f;
+    public int speedCooldown = 2;
+    public float speedBoost = 5000f;
     private float moveInput;
     private float swingForce = 150f;
     private int swingLeft;
@@ -49,23 +52,31 @@ public class MainCharacterInGame : MonoBehaviour
 
     private void TouchingXBoost()
     {
-        rb.AddForce(transform.right * 150, ForceMode2D.Impulse);
+        speed = speedBoost;
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision) //Collision are shit, need an OnTriggerEnter2D
-                                                           //(need script boost to add them in it and compare by tag)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "XBoost")
+        if (collision.CompareTag("XBoost"))
         {
             Destroy(collision.gameObject);
             TouchingXBoost();
+            StartCoroutine("SpeedDuration");
         }
-        if (collision.gameObject.name == "YBoost")
+
+        if (collision.CompareTag("YBoost"))
         {
             Destroy(collision.gameObject);
             TouchingYBoost();
         }
+    }
+
+    IEnumerator SpeedDuration()
+    {
+        yield return new WaitForSeconds(speedCooldown);
+        speed = normalSpeed;
     }
 
 
