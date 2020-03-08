@@ -10,6 +10,7 @@ public class SkinDisplay : MonoBehaviour
 
     public SpriteRenderer sprite;
 
+    public BoxCollider2D boxCollider2D;
     public Rigidbody2D rigidBody;
     // Start is called before the first frame update
     void Start()
