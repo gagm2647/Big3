@@ -54,14 +54,14 @@ public class SkinPage : MonoBehaviour
             case DIRECTION.BACKWARDS:
                 for (int i = activeSkinList.Length - 1; i > -1; i--)
                 {
-                    if ( (i - cnt)  > 0)
-                    {
-                        activeSkinList[i].GetComponent<Image>().color = skinsDB[(i - cnt) % skinsDB.Count].GetComponent<SpriteRenderer>().color;
-                    }
-                    else
-                    {
-                        activeSkinList[i].GetComponent<Image>().color = skinsDB[(cnt - i) % skinsDB.Count].GetComponent<SpriteRenderer>().color;
-                    }
+                    //if ( (i - cnt)  > 0)
+                    //{
+                        activeSkinList[i].GetComponent<Image>().color = skinsDB[Mathf.Abs(cnt - i) % skinsDB.Count].GetComponent<SpriteRenderer>().color;
+                    //}
+                    //else
+                    //{
+                    //    activeSkinList[i].GetComponent<Image>().color = skinsDB[(cnt - i) % skinsDB.Count].GetComponent<SpriteRenderer>().color;
+                    //}
                 }
                 cnt--;
 

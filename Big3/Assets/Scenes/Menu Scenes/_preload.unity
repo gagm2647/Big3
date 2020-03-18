@@ -216,5 +216,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skinDB:
-  - {fileID: 7966796690292430840, guid: 179ce8f7b69148c4d8f64a5e0052cd3d, type: 3}
-  - {fileID: 5389213137202649421, guid: 6f6b56a7a01fa2e4a916d8aad5423665, type: 3}
+  - {fileID: 8449659580700983753, guid: 93bec3985e799514d89ecd1d53b63c9a, type: 3}
+  - {fileID: 3929095108610687108, guid: b90d512a59ed53d49b6b8f53db58e64f, type: 3}
+  - {fileID: 2776007471942625301, guid: 263168652d61abf41ac31b3f8a99837b, type: 3}
+  - {fileID: 3624624338501135418, guid: 17dad5d2f88f3a044944c21fdd1234fa, type: 3}
+  - {fileID: 6215306094612425392, guid: ce6ab0c248a029b40ab87f57c573b9e2, type: 3}
+  - {fileID: 4672458994174593301, guid: 937c3af79df12c5419e97c76bef96fa6, type: 3}
